@@ -1,6 +1,6 @@
 # Lekcja 6
 
-Zajêcia zaczêliœmy od prostego programu porównuj¹cego dwie liczby
+ZajÄ™cia zaczÄ™liÅ›my od prostego programu porÃ³wnujÄ…cego dwie liczby
 
 ```csharp
 using System;
@@ -18,15 +18,15 @@ namespace Max
             double liczba1, liczba2;
             string liczba1Tekst, liczba2Tekst;
 
-            Console.Write("Podaj pierwsz¹ liczbê: ");
+            Console.Write("Podaj pierwszÄ… liczbÄ™: ");
             liczba1Tekst = Console.ReadLine();
             if (!double.TryParse(liczba1Tekst, out liczba1))
-                Console.WriteLine("Poda³eœ niepoprawn¹ wartoœæ. liczna1 = 0");
+                Console.WriteLine("PodaÅ‚eÅ› niepoprawnÄ… wartoÅ›Ä‡. liczna1 = 0");
 
-            Console.Write("Podaj drug¹ liczbê: ");
+            Console.Write("Podaj drugÄ… liczbÄ™: ");
             liczba2Tekst = Console.ReadLine();
             if (!double.TryParse(liczba2Tekst, out liczba2))
-                Console.WriteLine("Poda³eœ niepoprawn¹ wartoœæ. liczna2 = 0");
+                Console.WriteLine("PodaÅ‚eÅ› niepoprawnÄ… wartoÅ›Ä‡. liczna2 = 0");
 
             if(liczba1 > liczba2)
             {
@@ -46,8 +46,8 @@ namespace Max
     }
 }
 ```
-Nastêpnie edytowaliœmy ten program zmieniaj¹c go na program szukaj¹cy maksimum 
-z dowolnej iloœci liczb (u¿ytkownik decyduje w trakcje ile liczb chce porównywaæ)
+NastÄ™pnie edytowaliÅ›my ten program zmieniajÄ…c go na program szukajÄ…cy maksimum 
+z dowolnej iloÅ›ci liczb (uÅ¼ytkownik decyduje w trakcje ile liczb chce porÃ³wnywaÄ‡)
 
 ```csharp
 using System;
@@ -65,29 +65,29 @@ namespace Max
             double liczba1, liczba2, max;
             string liczba1Tekst, liczba2Tekst, odp;
 
-            Console.Write("Podaj liczbê: ");
+            Console.Write("Podaj liczbÄ™: ");
             liczba1Tekst = Console.ReadLine();
             if (!double.TryParse(liczba1Tekst, out liczba1))
-                Console.WriteLine("Poda³eœ niepoprawn¹ wartoœæ. liczna1 = 0");
+                Console.WriteLine("PodaÅ‚eÅ› niepoprawnÄ… wartoÅ›Ä‡. liczna1 = 0");
 
             max = liczba1;
 
-            Console.Write("Czy chcesz podaæ kolejn¹ liczbê: ");
+            Console.Write("Czy chcesz podaÄ‡ kolejnÄ… liczbÄ™: ");
             odp = Console.ReadLine();
 
             while (odp == "t")
             {
-                Console.Write("Podaj liczbê: ");
+                Console.Write("Podaj liczbÄ™: ");
                 liczba2Tekst = Console.ReadLine();
                 if (!double.TryParse(liczba2Tekst, out liczba2))
-                    Console.WriteLine("Poda³eœ niepoprawn¹ wartoœæ. liczna2 = 0");
+                    Console.WriteLine("PodaÅ‚eÅ› niepoprawnÄ… wartoÅ›Ä‡. liczna2 = 0");
                              
                 if(liczba2 > max)
                 {
                     max = liczba2;
                 }              
 
-                Console.Write("Czy chcesz podaæ kolejn¹ liczbê");
+                Console.Write("Czy chcesz podaÄ‡ kolejnÄ… liczbÄ™");
                 odp = Console.ReadLine();
             }
 
@@ -98,7 +98,7 @@ namespace Max
 }
 ```
 
-Na koniec zajêæ wyrzuciliœmy funkcjê poza "meina"
+Na koniec zajÄ™Ä‡ wyrzuciliÅ›my funkcjÄ™ poza "meina"
 
 ```csharp
 using System;
@@ -116,26 +116,26 @@ namespace Max
             double liczba1, liczba2, max;
             string liczba1Tekst, liczba2Tekst, odp;
 
-            Console.Write("Podaj liczbê: ");
+            Console.Write("Podaj liczbÄ™: ");
             liczba1Tekst = Console.ReadLine();
             if (!double.TryParse(liczba1Tekst, out liczba1))
-                Console.WriteLine("Poda³eœ niepoprawn¹ wartoœæ. liczna1 = 0");
+                Console.WriteLine("PodaÅ‚eÅ› niepoprawnÄ… wartoÅ›Ä‡. liczna1 = 0");
 
             max = liczba1;
 
-            Console.Write("Czy chcesz podaæ kolejn¹ liczbê: ");
+            Console.Write("Czy chcesz podaÄ‡ kolejnÄ… liczbÄ™: ");
             odp = Console.ReadLine();
 
             while (odp == "t")
             {
-                Console.Write("Podaj liczbê: ");
+                Console.Write("Podaj liczbÄ™: ");
                 liczba2Tekst = Console.ReadLine();
                 if (!double.TryParse(liczba2Tekst, out liczba2))
-                    Console.WriteLine("Poda³eœ niepoprawn¹ wartoœæ. liczna2 = 0");
+                    Console.WriteLine("PodaÅ‚eÅ› niepoprawnÄ… wartoÅ›Ä‡. liczna2 = 0");
 
                 max = Max(max, liczba2);
 
-                Console.Write("Czy chcesz podaæ kolejn¹ liczbê");
+                Console.Write("Czy chcesz podaÄ‡ kolejnÄ… liczbÄ™");
                 odp = Console.ReadLine();
             }
 
